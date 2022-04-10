@@ -82,6 +82,8 @@ void setup() {
 
   mcp2515.setBitrate(CAN_250KBPS, MCP_8MHZ);
   mcp2515.setNormalMode();
+
+  mcp2515.sendMessage(&windowPeriodicBroadcastMsg);
 }
 
 unsigned long currentMillis;
